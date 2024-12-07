@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
+body {
+  font-family: Rethink, sans-serif !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
