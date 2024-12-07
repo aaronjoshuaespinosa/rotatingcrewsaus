@@ -89,7 +89,12 @@ export default function Home() {
               </div>
             </div>
             <Drawer>
-              <DrawerTrigger className={rethink.className}>open</DrawerTrigger>
+              <DrawerTrigger
+                className={`${rethink.className} block lg:hidden`}
+                asChild
+              >
+                <Button variant="outline">Test</Button>
+              </DrawerTrigger>
               <DrawerContent className={rethink.className}>
                 Rotating Crews Aus
               </DrawerContent>
