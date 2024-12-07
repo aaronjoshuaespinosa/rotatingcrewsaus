@@ -6,15 +6,6 @@ import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
   Drawer,
   DrawerContent,
   DrawerHeader,
@@ -97,6 +88,12 @@ export default function Home() {
                 <p>0447 818 882</p>
               </div>
             </div>
+            <Drawer>
+              <DrawerTrigger className={rethink.className}>open</DrawerTrigger>
+              <DrawerContent className={rethink.className}>
+                Rotating Crews Aus
+              </DrawerContent>
+            </Drawer>
           </nav>
 
           {/* HERO SECTION */}
