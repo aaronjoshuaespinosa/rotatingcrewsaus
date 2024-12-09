@@ -11,6 +11,7 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import Services from "@/components/services";
 
 const rethink = Rethink_Sans({
   subsets: ["latin"],
@@ -167,6 +168,37 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+
+        {/* STATS SECTION */}
+        <div className="flex h-full w-full flex-col items-center gap-y-4 bg-blue-950 px-10 py-12 text-center text-white lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
+          <div className="flex flex-col items-center">
+            <h1 className="text-4xl font-black">
+              Lorem ipsum dolor argo set anum des
+            </h1>
+            <p>Lorem ipsum dolor set anum cristi ver sa lofta.</p>
+          </div>
+          <div className="flex h-full flex-col items-center justify-center gap-x-8 gap-y-8 md:flex-row">
+            <div className="flex flex-col items-center">
+              <p className="text-6xl font-black">70+</p>
+              <p>Lorem ipsum</p>
+            </div>
+            <div className="hidden h-24 w-[1px] border bg-white md:block" />
+            <div className="flex flex-col items-center">
+              <p className="text-6xl font-black">36%</p>
+              <p>Lorem ipsum</p>
+            </div>
+            <div className="hidden h-24 w-[1px] border bg-white md:block" />
+            <div className="flex flex-col items-center">
+              <p className="text-6xl font-black">5k+</p>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICES SECTION */}
+        <div className="flex items-center rounded-lg bg-white px-10 py-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
+          <Services />
         </div>
       </main>
     </div>
