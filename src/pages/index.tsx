@@ -47,7 +47,7 @@ export default function Home() {
 
           {/* NAV BAR */}
           <nav
-            className={`fixed top-0 z-50 flex w-full items-center justify-between px-10 duration-300 ease-in-out lg:px-24 xl:px-48 ${scroll ? "bg-white py-3" : "bg-none py-6"}`}
+            className={`fixed top-0 z-50 flex w-full items-center justify-between px-3 duration-300 ease-in-out md:px-10 lg:px-24 xl:px-48 ${scroll ? "bg-white py-3" : "bg-none py-6"}`}
           >
             <Link href="#" className="flex items-center gap-x-2">
               <Image
@@ -103,7 +103,7 @@ export default function Home() {
           </nav>
 
           {/* HERO SECTION */}
-          <div className="relative z-30 flex flex-col gap-y-6 px-10 pb-36 pt-48 lg:px-24 xl:px-48">
+          <div className="relative z-30 flex flex-col gap-y-6 px-4 pb-36 pt-48 md:px-10 lg:px-24 xl:px-48">
             <h1 className="max-w-2xl text-5xl font-black text-white drop-shadow-sm lg:text-6xl">
               <span className="text-primary">Innovative</span> Engineering
               Solutions for a Sustainable{" "}
@@ -124,7 +124,7 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <div
           id="about"
-          className="flex items-center rounded-lg bg-white px-10 py-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+          className="flex items-center rounded-lg bg-white px-4 py-24 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
         >
           <div className="flex w-full flex-col gap-y-4">
             <h1 className="max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
@@ -174,7 +174,7 @@ export default function Home() {
         </div>
 
         {/* STATS SECTION */}
-        <div className="flex h-full w-full flex-col items-center gap-y-4 bg-blue-950 px-10 py-12 text-center text-white lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
+        <div className="flex h-full w-full flex-col items-center gap-y-4 bg-blue-950 px-4 py-12 text-center text-white md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
           <div className="flex flex-col items-center">
             <h1 className="text-4xl font-black">
               Lorem ipsum dolor argo set anum des
@@ -202,7 +202,7 @@ export default function Home() {
         {/* SERVICES SECTION */}
         <div
           id="services"
-          className="flex flex-col items-center rounded-lg bg-white px-10 pb-12 pt-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+          className="flex flex-col items-center rounded-lg bg-white px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
         >
           <div className="flex w-full flex-col items-center justify-between gap-x-4 gap-y-1 pb-4 lg:flex-row">
             <h1 className="max-w-2xl text-4xl font-black text-primary drop-shadow-sm lg:text-6xl">
@@ -220,7 +220,7 @@ export default function Home() {
         {/* WHY US SECTION */}
         <div
           id="why-us"
-          className="flex flex-col items-center rounded-lg bg-gray-200 px-10 py-12 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+          className="flex flex-col items-center rounded-lg bg-gray-200 px-4 py-12 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
         >
           <p className="text-center text-xl font-bold text-gray-600">
             And now, for the BIG question
