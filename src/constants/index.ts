@@ -7,7 +7,7 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    image: "",
+    image: "/RE Inspection 1.webp",
     side: "left",
     title: "Reliability and Inspection",
     contents: [
@@ -24,7 +24,7 @@ export const SERVICES = [
     ],
   },
   {
-    image: "",
+    image: "/Vibration-Analysis-6.webp",
     side: "right",
     title: "Rotating Equipment Installation and Maintenance",
     contents: [
@@ -38,7 +38,7 @@ export const SERVICES = [
     ],
   },
   {
-    image: "",
+    image: "/RE Inspection 7.webp",
     side: "left",
     title: "Maintenance and Shutdown Crew",
     contents: [

@@ -130,7 +130,7 @@ export default function Home() {
             <div className="h-60 w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622] sm:h-96 lg:hidden">
               <Image
                 src={"/Laser-Alignment-6.webp"}
-                alt="logo"
+                alt="about-image"
                 width="1000"
                 height="1000"
                 className="h-full w-full rounded-br-[3rem] object-cover object-center"
