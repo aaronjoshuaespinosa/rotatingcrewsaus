@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { name: "About", link: "#about" },
   { name: "Services", link: "#services" },
   { name: "Why us?", link: "#why-us" },
-  { name: "Contact", link: "#" },
+  { name: "Contact", link: "#contact" },
 ];
 
 export const SERVICES = [

@@ -12,6 +12,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import Services from "@/components/services";
+import ContactForm from "@/components/contactForm";
 
 const rethink = Rethink_Sans({
   subsets: ["latin"],
@@ -260,6 +261,24 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+
+        {/* CONTACT SECTION */}
+        <div
+          id="contact"
+          className="flex flex-col items-center bg-blue-950 px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
+        >
+          <div className="flex w-full flex-col items-center py-8">
+            <h1 className="max-w-2xl text-4xl font-black text-white drop-shadow-sm lg:text-6xl">
+              Contact us
+            </h1>
+            <p className="text-center text-white md:max-w-lg xl:max-w-xl">
+              Get in touch with us today to discuss how we can support your
+              project needs with expert engineering solutions. We're here to
+              help!
+            </p>
+          </div>
+          <ContactForm />
         </div>
       </main>
     </div>
