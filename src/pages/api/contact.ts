@@ -28,7 +28,7 @@ export default async function handler(
       from: email,
       to: process.env.EMAIL_USER, // Your email address to receive the message
       subject: `New inquiry from ${name}`,
-      text: `You have received a new message from ${name} (${email}):\n\nContact Number: ${contactNumber}\n\nInquiry:\n${message}\n\nThis messaged is sent from Rotating Crew Aus Website Inquiry`,
+      text: `You have received a new message from ${name} (${email}):\n\nContact Number: ${contactNumber}\n\nInquiry:\n${message}\n\nThis message is sent from Rotating Crew Aus Website Inquiry`,
     };
 
     try {
