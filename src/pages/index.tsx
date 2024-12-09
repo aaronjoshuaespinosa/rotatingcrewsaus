@@ -49,7 +49,7 @@ export default function Home() {
           <nav
             className={`fixed top-0 z-50 flex w-full items-center justify-between px-10 duration-300 ease-in-out lg:px-24 xl:px-48 ${scroll ? "bg-white py-3" : "bg-none py-6"}`}
           >
-            <div className="flex items-center gap-x-2">
+            <Link href="#" className="flex items-center gap-x-2">
               <Image
                 src={"/RotatingCrews Logo.png"}
                 alt="logo"
@@ -69,7 +69,7 @@ export default function Home() {
                   Aus
                 </p>
               </div>
-            </div>
+            </Link>
             <div className="hidden gap-x-4 lg:flex xl:gap-x-10">
               {NAV_LINKS.map(({ name, link }) => (
                 <Link key={link} href={link}>
@@ -122,9 +122,12 @@ export default function Home() {
         </div>
 
         {/* ABOUT SECTION */}
-        <div className="flex items-center rounded-lg bg-white px-10 py-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
+        <div
+          id="about"
+          className="flex items-center rounded-lg bg-white px-10 py-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+        >
           <div className="flex w-full flex-col gap-y-4">
-            <h1 className="max-w-2xl text-4xl font-black text-primary drop-shadow-sm lg:text-6xl">
+            <h1 className="max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
               About us
             </h1>
             <div className="h-60 w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622] sm:h-96 lg:hidden">
@@ -197,8 +200,66 @@ export default function Home() {
         </div>
 
         {/* SERVICES SECTION */}
-        <div className="flex items-center rounded-lg bg-white px-10 py-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
+        <div
+          id="services"
+          className="flex flex-col items-center rounded-lg bg-white px-10 pb-12 pt-24 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+        >
+          <div className="flex w-full flex-col items-center justify-between gap-x-4 gap-y-1 pb-4 lg:flex-row">
+            <h1 className="max-w-2xl text-4xl font-black text-primary drop-shadow-sm lg:text-6xl">
+              Our Services
+            </h1>
+            <p className="text-center md:max-w-lg lg:text-right xl:max-w-2xl">
+              We provide expert personnel for oil, gas, and mining, ensuring
+              efficient project support through our pipeline and process
+              expertise.
+            </p>
+          </div>
           <Services />
+        </div>
+
+        {/* WHY US SECTION */}
+        <div
+          id="why-us"
+          className="flex flex-col items-center rounded-lg bg-gray-200 px-10 py-12 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+        >
+          <p className="text-center text-xl font-bold text-gray-600">
+            And now, for the BIG question
+          </p>
+          <h1 className="max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
+            Why us?
+          </h1>
+          <div className="flex flex-col-reverse gap-x-8 gap-y-6 py-8 lg:flex-row">
+            <div className="flex w-full flex-col gap-y-4">
+              <p>
+                Our clients are the driving force behind our dedication to
+                providing engineering, commissioning, sustainability, and
+                equipment planning solutions to improve integrity and
+                performance. We leverage on our 16yrs of collective and diverse
+                experience, technical expertise, and industry knowledge of
+                rotating equipment and machinery.
+              </p>
+              <p>
+                We are committed to delivering holistic advice for our clients’
+                most complex challenges according to the codes and standards and
+                work with them to meet their design and construction needs
+                within budget and desired timeline.
+              </p>
+              <p>
+                At RCA, we are committed to providing the best results for our
+                clients driven by our commitment to our core values of
+                Excellence, Trust, Relationships, Stability, and Passion.
+              </p>
+            </div>
+            <div className="h-96 w-full overflow-hidden rounded-br-[3rem] drop-shadow-[-8px_8px_0px_#F11622]">
+              <Image
+                src="/Gas plant 1.webp"
+                alt="why-us-image"
+                height="1000"
+                width="1000"
+                className="h-full w-full object-cover object-center md:object-bottom lg:object-center"
+              />
+            </div>
+          </div>
         </div>
       </main>
     </div>

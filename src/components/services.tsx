@@ -23,7 +23,9 @@ export default function Services() {
               />
             </div>
             <div className="flex w-full flex-col gap-y-4">
-              <h1 className="text-4xl font-black text-blue-950">{title}</h1>
+              <h1 className="text-3xl font-black text-blue-950 md:text-4xl">
+                {title}
+              </h1>
               <div className="block h-80 w-full overflow-hidden rounded-br-[3rem] bg-blue-950 md:h-72 lg:hidden lg:h-64">
                 <Image
                   src={image}

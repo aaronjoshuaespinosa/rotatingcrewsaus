@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
-  { name: "About", link: "#" },
-  { name: "Services", link: "#" },
-  { name: "Why us?", link: "#" },
+  { name: "About", link: "#about" },
+  { name: "Services", link: "#services" },
+  { name: "Why us?", link: "#why-us" },
   { name: "Contact", link: "#" },
 ];
 
