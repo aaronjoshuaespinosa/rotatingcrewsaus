@@ -1,19 +1,23 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { Rethink_Sans } from "next/font/google";
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Menu, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import Services from "@/components/services";
 import ContactForm from "@/components/contactForm";
 import Footer from "@/components/footer";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const rethink = Rethink_Sans({
   subsets: ["latin"],
@@ -22,6 +26,7 @@ const rethink = Rethink_Sans({
 });
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -91,17 +96,50 @@ export default function Home() {
                 <p>0447 818 882</p>
               </div>
             </div>
-            <Drawer>
-              <DrawerTrigger
+
+            <DropdownMenu open={open} onOpenChange={setOpen}>
+              <DropdownMenuTrigger
                 className={`${rethink.className} block lg:hidden`}
                 asChild
               >
-                <Button variant="outline">Test</Button>
-              </DrawerTrigger>
-              <DrawerContent className={rethink.className}>
-                Rotating Crews Aus
-              </DrawerContent>
-            </Drawer>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="flex items-center justify-center"
+                >
+                  <Menu />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className={`${rethink.className} `}>
+                <DropdownMenuGroup className="flex w-full flex-col items-center gap-y-2">
+                  {NAV_LINKS.map(({ name, link }) => (
+                    <DropdownMenuItem className="w-full text-center">
+                      <Link
+                        key={link}
+                        href={link}
+                        className="w-full"
+                        onClick={() => setOpen(false)}
+                      >
+                        <p className="w-full text-center text-base font-bold">
+                          {name}
+                        </p>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuGroup className="flex flex-col items-center p-2">
+                  <div className="flex items-center gap-x-2">
+                    <Mail size={20} />
+                    <p>rotatingcrewaus@gmail.com</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    <Phone size={20} />
+                    <p>0447 818 882</p>
+                  </div>
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* HERO SECTION */}
