@@ -64,7 +64,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-2xl rounded-md bg-white p-8">
+    <div className="relative z-10 mx-auto w-full max-w-2xl rounded-md bg-white p-8">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-y-4"

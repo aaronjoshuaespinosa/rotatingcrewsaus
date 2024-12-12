@@ -51,3 +51,27 @@ export const SERVICES = [
     ],
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    name: "Alex Morgan",
+    role: "Operations Manager, EnergyCorp",
+    image: "",
+    message:
+      '"Rotating Crew Aus has been a game-changer for our oil and gas projects. Their expertise in mechanical and process engineering ensured seamless operations, and their commitment to safety and efficiency exceeded our expectations. We\’re thrilled with the results and look forward to collaborating again!"',
+  },
+  {
+    name: "Alex Morgan",
+    role: "Operations Manager, EnergyCorp",
+    image: "",
+    message:
+      '"Rotating Crew Aus has been a game-changer for our oil and gas projects. Their expertise in mechanical and process engineering ensured seamless operations, and their commitment to safety and efficiency exceeded our expectations. We\’re thrilled with the results and look forward to collaborating again!"',
+  },
+  {
+    name: "Alex Morgan",
+    role: "Operations Manager, EnergyCorp",
+    image: "",
+    message:
+      '"Rotating Crew Aus has been a game-changer for our oil and gas projects. Their expertise in mechanical and process engineering ensured seamless operations, and their commitment to safety and efficiency exceeded our expectations. We\’re thrilled with the results and look forward to collaborating again!"',
+  },
+];

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS } from "@/constants";
+import { NAV_LINKS, TESTIMONIALS } from "@/constants";
 import Link from "next/link";
 import { Rethink_Sans } from "next/font/google";
 import Image from "next/image";
@@ -112,10 +112,9 @@ export default function Home() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className={`${rethink.className} `}>
                 <DropdownMenuGroup className="flex w-full flex-col items-center gap-y-2">
-                  {NAV_LINKS.map(({ name, link }) => (
-                    <DropdownMenuItem className="w-full text-center">
+                  {NAV_LINKS.map(({ name, link }, i) => (
+                    <DropdownMenuItem className="w-full text-center" key={i}>
                       <Link
-                        key={link}
                         href={link}
                         className="w-full"
                         onClick={() => setOpen(false)}
@@ -179,7 +178,7 @@ export default function Home() {
                 className="h-full w-full rounded-br-[3rem] object-cover object-center"
               />
             </div>
-            <div className="flex flex-col gap-y-4 py-4 lg:py-0">
+            <div className="flex flex-col gap-y-4 py-4 text-justify lg:py-0">
               <p className="max-w-2xl text-blue-950 drop-shadow-md">
                 Rotating Crew Aus provides exceptional engineering consulting
                 services in the oil and gas, mining and construction industry
@@ -269,7 +268,7 @@ export default function Home() {
             Why us?
           </h1>
           <div className="flex flex-col-reverse gap-x-8 gap-y-6 py-8 lg:flex-row">
-            <div className="flex w-full flex-col gap-y-4">
+            <div className="flex w-full flex-col gap-y-4 text-justify">
               <p>
                 Our clients are the driving force behind our dedication to
                 providing engineering, commissioning, sustainability, and
@@ -302,12 +301,49 @@ export default function Home() {
           </div>
         </div>
 
+        {/* TESTIMONIALS SECTION */}
+        <div className="flex flex-col items-center bg-blue-950 px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48">
+          <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-1 pb-4 text-white">
+            <h1 className="max-w-2xl text-4xl font-black drop-shadow-sm lg:text-6xl">
+              Testimonials
+            </h1>
+            <p className="text-center md:max-w-lg lg:text-right xl:max-w-2xl">
+              Our happy clients say...
+            </p>
+          </div>
+          <div className="flex w-full flex-col gap-4 lg:flex-row">
+            {TESTIMONIALS.map(({ name, role, image, message }) => (
+              <div
+                className="flex h-96 w-full flex-col justify-between rounded-br-[3rem] bg-white p-4"
+                key={name}
+              >
+                <p className="italic">{message}</p>
+                <div className="flex items-center gap-x-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-950" />
+                  <div className="">
+                    <p className="text-xl font-black text-primary">{name}</p>
+                    <p>{role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CONTACT SECTION */}
         <div
           id="contact"
-          className="flex flex-col items-center bg-blue-950 px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
+          className="relative flex flex-col items-center overflow-hidden px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
         >
-          <div className="flex w-full flex-col items-center py-8">
+          <Image
+            src={"/gas plant 2.webp"}
+            alt="hero image"
+            width="1500"
+            height="1500"
+            className="absolute top-0 z-0 h-full w-full object-cover object-center brightness-50 filter md:brightness-75 lg:brightness-90"
+          />
+          <div className="absolute top-0 z-10 h-72 w-full bg-gradient-to-t from-transparent to-blue-950" />
+          <div className="relative z-10 flex w-full flex-col items-center py-8">
             <h1 className="max-w-2xl text-4xl font-black text-white drop-shadow-sm lg:text-6xl">
               Contact us
             </h1>
@@ -319,6 +355,8 @@ export default function Home() {
           </div>
           <ContactForm />
         </div>
+
+        {/* FOOTER */}
         <Footer />
       </main>
     </div>

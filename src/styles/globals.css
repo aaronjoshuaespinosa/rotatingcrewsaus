@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Rethink;
-  src:
-    url("/src/pages/fonts/RethinkSans-Bold.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-BoldItalic.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-ExtraBold.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-ExtraBoldItalic.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-Medium.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-Italic.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-MediumItalic.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-Regular.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-SemiBold.ttf") format("truetype"),
-    url("/src/pages/fonts/RethinkSans-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 400, 500, 600, 700, 800;
-  font-style: normal;
-}
-
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
