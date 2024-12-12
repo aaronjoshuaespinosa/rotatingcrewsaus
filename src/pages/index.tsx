@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/drawer";
 import Services from "@/components/services";
 import ContactForm from "@/components/contactForm";
+import Footer from "@/components/footer";
 
 const rethink = Rethink_Sans({
   subsets: ["latin"],
@@ -104,7 +105,7 @@ export default function Home() {
           </nav>
 
           {/* HERO SECTION */}
-          <div className="relative z-30 flex flex-col gap-y-6 px-4 pb-36 pt-48 md:px-10 lg:px-24 xl:px-48">
+          <div className="relative z-30 flex min-h-screen flex-col justify-center gap-y-6 px-4 pb-36 pt-48 md:min-h-fit md:px-10 lg:px-24 xl:px-48">
             <h1 className="max-w-2xl text-5xl font-black text-white drop-shadow-sm lg:text-6xl">
               <span className="text-primary">Innovative</span> Engineering
               Solutions for a Sustainable{" "}
@@ -280,6 +281,7 @@ export default function Home() {
           </div>
           <ContactForm />
         </div>
+        <Footer />
       </main>
     </div>
   );

@@ -119,13 +119,13 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="name" className="text-bold text-blue-950">
-            Inquiry<span className="text-red-500">*</span>
+            Enquiry<span className="text-red-500">*</span>
           </label>
           <Textarea
             id="message"
             {...register("message")}
             className="w-full"
-            placeholder="Enter your inquiry..."
+            placeholder="Enter your enquiry..."
           />
           {errors.message && (
             <p className="text-sm text-red-500">{errors.message.message}</p>
@@ -137,7 +137,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-blue-950 text-white"
         >
-          {isSubmitting ? "Sending..." : "Send Inquiry"}
+          {isSubmitting ? "Sending..." : "Send Enquiry"}
         </Button>
 
         {success && (
@@ -152,7 +152,7 @@ export default function ContactForm() {
         <p className="font-black text-blue-950"> or</p>
         <div className="h-[2px] w-full bg-blue-950" />
       </div>
-      <div className="flex w-full items-center justify-center gap-10 text-blue-950">
+      <div className="flex w-full flex-col items-center justify-center gap-x-10 gap-y-4 text-blue-950 md:flex-row">
         <div className="flex items-center gap-x-2">
           <Mail size={20} />
           <p>rotatingcrewaus@gmail.com</p>

@@ -27,8 +27,8 @@ export default async function handler(
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_USER, // Your email address to receive the message
-      subject: `New inquiry from ${name}`,
-      text: `You have received a new message from ${name} (${email}):\n\nContact Number: ${contactNumber}\n\nInquiry:\n${message}\n\nThis message is sent from Rotating Crew Aus Website Inquiry`,
+      subject: `New enquiry from ${name}`,
+      text: `You have received a new message from ${name} (${email}):\n\nContact Number: ${contactNumber}\n\nEnquiry:\n${message}\n\nThis message is sent from Rotating Crew Aus Website Enquiry`,
     };
 
     try {
