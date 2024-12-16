@@ -134,7 +134,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-x-2">
                     <Phone size={20} />
-                    <p>0447 818 882</p>
+                    <p>0478 368 128</p>
                   </div>
                 </DropdownMenuGroup>
               </DropdownMenuContent>
