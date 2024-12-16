@@ -154,7 +154,7 @@ export default function Home() {
               experience. We specialize in innovative, efficient, and
               sustainable approaches across key industries.
             </p>
-            <Link href="#">
+            <Link href="#contact">
               <Button>Contact us</Button>
             </Link>
           </div>
