@@ -243,8 +243,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* STATS SECTION */}
+{/*
           <div className="flex h-full w-full flex-col items-center gap-y-4 bg-blue-950 px-4 py-12 text-center text-white md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
             <div className="flex flex-col items-center">
               <h1 className="text-4xl font-black">
@@ -269,7 +268,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+*/}
           {/* SERVICES SECTION */}
           <div
             id="services"
@@ -332,8 +331,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* TESTIMONIALS SECTION */}
+{/*
           <div className="flex flex-col items-center bg-blue-950 px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48">
             <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-1 pb-4 text-white">
               <h1 className="max-w-2xl text-4xl font-black drop-shadow-sm lg:text-6xl">
@@ -361,7 +359,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-
+*/}
           {/* CONTACT SECTION */}
           <div
             id="contact"
