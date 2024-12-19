@@ -9,7 +9,7 @@ export default function Footer() {
         <p>
           Made with ❤️ by{" "}
           <Link
-            href="https://ajespinosa.vercel.app/"
+            href="https://ajespinosa.com/"
             target="_blank"
             className="underline"
           >
