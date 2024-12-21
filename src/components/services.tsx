@@ -35,7 +35,7 @@ export default function Services() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <ul className="list-inside list-disc">
+              <ul className="list-outside list-disc p-4">
                 {contents.map((content, i) => (
                   <li key={i}>{content}</li>
                 ))}
