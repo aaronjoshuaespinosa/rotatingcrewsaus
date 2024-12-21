@@ -9,7 +9,7 @@ export default function Services() {
         {SERVICES.map(({ image, side, title, contents }) => (
           <div
             key={title}
-            className={`flex gap-x-8 rounded-md bg-gray-200 p-8 ${side == "left" ? "flex-row" : "flex-row-reverse"}`}
+            className={`flex gap-x-8 rounded-md bg-gray-200 p-4 md:p-8 ${side == "left" ? "flex-row" : "flex-row-reverse"}`}
           >
             <div
               className={`hidden h-96 w-full overflow-hidden bg-blue-950 lg:block ${side == "left" ? "rounded-br-[3rem]" : "rounded-bl-[3rem]"}`}

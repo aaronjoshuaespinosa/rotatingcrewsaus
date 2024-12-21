@@ -18,7 +18,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
 import Head from "next/head";
+import ScrollProgress from "@/components/ui/scroll-progress";
+import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
+import DotPattern from "@/components/ui/dot-pattern";
+import { cn } from "@/lib/utils";
 
 const rethink = Rethink_Sans({
   subsets: ["latin"],
@@ -73,20 +78,38 @@ export default function Home() {
       </Head>
 
       <div className={rethink.className}>
-        <main className="relative h-full w-full font-semibold">
+        <motion.div
+          initial={{ translateY: 0 }}
+          animate={{ translateY: "-100%" }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="fixed top-0 z-50 h-screen w-screen bg-primary"
+        />
+        <motion.div
+          initial={{ translateY: 0 }}
+          animate={{ translateY: "-100%" }}
+          transition={{ duration: 1, delay: 0.7 }}
+          className="fixed top-0 z-[49] h-screen w-screen bg-blue-950"
+        />
+        <motion.div
+          initial={{ translateY: 0 }}
+          animate={{ translateY: "-100%" }}
+          transition={{ duration: 1, delay: 0.75 }}
+          className="fixed top-0 z-[48] h-screen w-screen bg-white"
+        />
+        <main className="relative h-full w-full text-sm font-semibold md:text-base">
           <div className="relative">
             <Image
-              src={"/Hero.webp"}
+              src={"/E60C9269-090A-41B5-A502-7968CF46E1C9.jpg"}
               alt="hero image"
-              width="1000"
-              height="1000"
-              className="absolute top-0 h-full w-full object-cover object-top brightness-50 filter md:brightness-75 lg:brightness-90"
+              width="1500"
+              height="1500"
+              className="absolute top-0 h-full w-full object-cover object-top brightness-50 filter md:brightness-75 lg:brightness-75"
             />
-            <div className="absolute top-0 z-10 h-64 w-full bg-gradient-to-t from-transparent to-white" />
+            <div className="absolute top-0 z-10 h-64 w-full bg-gradient-to-t from-transparent to-blue-950" />
 
             {/* NAV BAR */}
             <nav
-              className={`fixed top-0 z-50 flex w-full items-center justify-between px-3 duration-300 ease-in-out md:px-10 lg:px-24 xl:px-48 ${scroll ? "bg-white py-3" : "bg-none py-6"}`}
+              className={`fixed top-0 z-40 flex w-full items-center justify-between px-3 duration-300 ease-in-out md:px-10 lg:px-24 xl:px-48 ${scroll ? "bg-white py-3 text-blue-950" : "bg-none py-6 text-white"}`}
             >
               <Link href="#" className="flex items-center gap-x-2">
                 <Image
@@ -112,20 +135,20 @@ export default function Home() {
               <div className="hidden gap-x-4 lg:flex xl:gap-x-10">
                 {NAV_LINKS.map(({ name, link }) => (
                   <Link key={link} href={link}>
-                    <p className="decoration-2 hover:font-bold hover:underline">
+                    <p className="decoration-2 duration-300 ease-in-out hover:font-bold hover:underline">
                       {name}
                     </p>
                   </Link>
                 ))}
               </div>
               <div className="hidden flex-col lg:flex">
-                <div className="flex items-center gap-x-2">
+                <div className="flex items-center gap-x-2 duration-300 ease-in-out">
                   <Mail size={20} />
                   <p>rotatingcrewaus@gmail.com</p>
                 </div>
-                <div className="flex items-center gap-x-2">
+                <div className="flex items-center gap-x-2 duration-300 ease-in-out">
                   <Phone size={20} />
-                  <p>0447 818 882</p>
+                  <p>0478 368 128</p>
                 </div>
               </div>
 
@@ -137,7 +160,7 @@ export default function Home() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="flex items-center justify-center"
+                    className="flex items-center justify-center bg-none text-blue-950"
                   >
                     <Menu />
                   </Button>
@@ -172,9 +195,10 @@ export default function Home() {
                 </DropdownMenuContent>
               </DropdownMenu>
             </nav>
+            <ScrollProgress className="top-0" />
 
             {/* HERO SECTION */}
-            <div className="relative z-30 flex min-h-screen flex-col justify-center gap-y-6 px-4 pb-36 pt-48 md:min-h-fit md:px-10 lg:px-24 xl:px-48">
+            <div className="relative z-30 flex min-h-screen flex-col justify-center gap-y-6 px-4 pb-36 pt-48 md:px-10 lg:px-24 xl:px-48">
               <h1 className="max-w-2xl text-5xl font-black text-white drop-shadow-sm lg:text-6xl">
                 <span className="text-primary">Innovative</span> Engineering
                 Solutions for a Sustainable{" "}
@@ -187,7 +211,8 @@ export default function Home() {
                 sustainable approaches across key industries.
               </p>
               <Link href="#contact">
-                <Button>Contact us</Button>
+                {/* <Button>Contact us</Button> */}
+                <InteractiveHoverButton />
               </Link>
             </div>
           </div>
@@ -195,19 +220,21 @@ export default function Home() {
           {/* ABOUT SECTION */}
           <div
             id="about"
-            className="flex items-center rounded-lg bg-white px-4 py-24 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+            className="relative flex items-center rounded-lg bg-white px-4 py-24 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
           >
-            <div className="flex w-full flex-col gap-y-4">
+            <DotPattern className={cn("absolute left-0 top-0 z-0")} />
+            <div className="absolute left-0 z-10 h-full w-full bg-gradient-to-t from-white to-transparent md:bg-gradient-to-r" />
+            <div className="z-20 flex w-full flex-col gap-y-4">
               <h1 className="max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
                 About us
               </h1>
-              <div className="h-60 w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622] sm:h-96 lg:hidden">
+              <div className="relative z-20 h-60 w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622] sm:h-96 lg:hidden">
                 <Image
                   src={"/Laser-Alignment-6.webp"}
                   alt="about-image"
                   width="1000"
                   height="1000"
-                  className="h-full w-full rounded-br-[3rem] object-cover object-center"
+                  className="relative h-full w-full rounded-br-[3rem] object-cover object-center"
                 />
               </div>
               <div className="flex flex-col gap-y-4 py-4 text-justify lg:py-0">
@@ -232,18 +259,19 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden w-full lg:block">
-              <div className="h-[25rem] w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622]">
+              <div className="relative z-20 h-[25rem] w-full overflow-hidden drop-shadow-[-8px_8px_0px_#F11622]">
                 <Image
                   src={"/Laser-Alignment-6.webp"}
                   alt="logo"
                   width="1000"
                   height="1000"
-                  className="h-full w-full rounded-br-[3rem] object-cover object-center"
+                  className="relative z-20 h-full w-full rounded-br-[3rem] object-cover object-center"
                 />
               </div>
             </div>
           </div>
-{/*
+
+          {/*
           <div className="flex h-full w-full flex-col items-center gap-y-4 bg-blue-950 px-4 py-12 text-center text-white md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48">
             <div className="flex flex-col items-center">
               <h1 className="text-4xl font-black">
@@ -268,20 +296,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-*/}
+          */}
+
           {/* SERVICES SECTION */}
           <div
             id="services"
             className="flex flex-col items-center rounded-lg bg-white px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
           >
-            <div className="flex w-full flex-col items-center justify-between gap-x-4 gap-y-1 pb-4 lg:flex-row">
+            <div className="flex w-full flex-col items-center justify-between gap-x-4 gap-y-1 pb-4 text-center">
               <h1 className="max-w-2xl text-4xl font-black text-primary drop-shadow-sm lg:text-6xl">
                 Our Services
               </h1>
-              <p className="text-center md:max-w-lg lg:text-right xl:max-w-2xl">
-                We provide expert personnel for oil, gas, and mining, ensuring
-                efficient project support through our pipeline and process
-                expertise.
+              <p className="md:max-w-lg xl:max-w-2xl">
+                We provide expert personnel for oil and gas, mining and
+                construction ensuring efficient project support through our
+                pipeline and process expertise.
               </p>
             </div>
             <Services />
@@ -290,15 +319,15 @@ export default function Home() {
           {/* WHY US SECTION */}
           <div
             id="why-us"
-            className="flex flex-col items-center rounded-lg bg-gray-200 px-4 py-12 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
+            className="relative flex flex-col items-center rounded-lg bg-gray-200 px-4 py-12 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
           >
-            <p className="text-center text-xl font-bold text-gray-600">
+            <p className="z-10 text-center text-xl font-bold text-gray-600">
               And now, for the BIG question
             </p>
-            <h1 className="max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
-              Why us?
+            <h1 className="z-10 max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
+              Why RCA?
             </h1>
-            <div className="flex flex-col-reverse gap-x-8 gap-y-6 py-8 lg:flex-row">
+            <div className="z-10 flex flex-col-reverse gap-x-8 gap-y-6 py-8 lg:flex-row">
               <div className="flex w-full flex-col gap-y-4 text-justify">
                 <p>
                   Our clients are the driving force behind our dedication to
@@ -331,7 +360,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/*
+
+          {/*
           <div className="flex flex-col items-center bg-blue-950 px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48">
             <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-1 pb-4 text-white">
               <h1 className="max-w-2xl text-4xl font-black drop-shadow-sm lg:text-6xl">
@@ -359,12 +389,16 @@ export default function Home() {
               ))}
             </div>
           </div>
-*/}
+          */}
+
           {/* CONTACT SECTION */}
           <div
             id="contact"
-            className="relative flex flex-col items-center overflow-hidden px-4 pb-12 pt-12 md:px-10 lg:gap-x-10 lg:px-24 lg:pt-24 xl:gap-x-40 xl:px-48"
+            className="relative flex flex-col items-center overflow-hidden px-4 py-12 md:px-10 lg:gap-x-10 lg:px-24 lg:py-24 xl:gap-x-40 xl:px-48"
           >
+            <p className="pointer-events-none absolute -bottom-5 -left-5 z-10 hidden font-black text-white opacity-50 md:block md:text-[10rem] md:leading-[10rem] lg:text-[15rem] lg:leading-[15rem]">
+              Contact us
+            </p>
             <Image
               src={"/gas plant 2.webp"}
               alt="hero image"

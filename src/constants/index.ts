@@ -28,7 +28,7 @@ export const SERVICES = [
     side: "right",
     title: "Rotating Equipment Installation and Maintenance",
     contents: [
-      "Laser alignment on compressors, fin fans, pumps and motors",
+      "Laser alignment",
       "Turn around support",
       "Condition Monitoring according to ISO 17359:2018",
       "Vibration monitoring according to ISO 20816",
