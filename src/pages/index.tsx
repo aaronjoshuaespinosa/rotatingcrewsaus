@@ -99,11 +99,11 @@ export default function Home() {
         <main className="relative h-full w-full text-sm font-semibold md:text-base">
           <div className="relative">
             <Image
-              src={"/E60C9269-090A-41B5-A502-7968CF46E1C9.jpg"}
+              src={"/Gas plant cover.webp"}
               alt="hero image"
-              width="1500"
-              height="1500"
-              className="absolute top-0 h-full w-full object-cover object-top brightness-50 filter md:brightness-75 lg:brightness-75"
+              width="2000"
+              height="2000"
+              className="absolute top-0 h-full w-full object-cover object-center brightness-50 filter md:brightness-75 lg:brightness-75"
             />
             <div className="absolute top-0 z-10 h-64 w-full bg-gradient-to-t from-transparent to-blue-950" />
 
