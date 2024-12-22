@@ -400,7 +400,7 @@ export default function Home() {
               Contact us
             </p>
             <Image
-              src={"/gas plant 2.webp"}
+              src={"/E60C9269-090A-41B5-A502-7968CF46E1C9.jpg"}
               alt="hero image"
               width="1500"
               height="1500"
