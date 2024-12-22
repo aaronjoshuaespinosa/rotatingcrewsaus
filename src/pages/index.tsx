@@ -148,7 +148,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-x-2 duration-300 ease-in-out">
                   <Phone size={20} />
-                  <p>0478 368 128</p>
+                  <p>0447 818 882</p>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-x-2">
                       <Phone size={20} />
-                      <p>0478 368 128</p>
+                      <p>0447 818 882</p>
                     </div>
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
@@ -321,11 +321,11 @@ export default function Home() {
             id="why-us"
             className="relative flex flex-col items-center rounded-lg bg-gray-200 px-4 py-12 md:px-10 lg:gap-x-10 lg:px-24 xl:gap-x-40 xl:px-48"
           >
-            <p className="z-10 text-center text-xl font-bold text-gray-600">
+            {/*<p className="z-10 text-center text-xl font-bold text-gray-600">
               And now, for the BIG question
-            </p>
+            </p>*/}
             <h1 className="z-10 max-w-2xl text-5xl font-black text-primary drop-shadow-sm lg:text-6xl">
-              Why RCA?
+              Why Choose RCA?
             </h1>
             <div className="z-10 flex flex-col-reverse gap-x-8 gap-y-6 py-8 lg:flex-row">
               <div className="flex w-full flex-col gap-y-4 text-justify">
